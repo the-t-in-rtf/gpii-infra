@@ -54,7 +54,7 @@ task :destroy_hard_and_deploy_ci => [:set_vars_ci] do
   begin
     Rake::Task["deploy"].invoke
     Rake::Task["test_preferences_read"].invoke
-    Rake::Task["test_flowmanager"].invoke
+    Rake::Task["test_flowmanager_read"].invoke
     Rake::Task["display_cluster_state"].invoke
     Rake::Task["destroy_hard"].reenable
     Rake::Task["destroy_hard"].invoke
