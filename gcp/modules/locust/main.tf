@@ -35,6 +35,7 @@ data "template_file" "locust_values" {
     locust_tag        = "${var.locust_tag}"
     locust_workers    = "${var.locust_workers}"
     target_host       = "${var.locust_target_host}"
+    secondary_host    = "${var.locust_secondary_host}"
     locust_script     = "${var.locust_script}"
   }
 }

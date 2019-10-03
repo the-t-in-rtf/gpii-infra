@@ -5,6 +5,7 @@ image:
 master:
   config:
     target-host: ${target_host}
+    secondary-host: ${secondary_host}
 
 worker:
   replicaCount: ${locust_workers}

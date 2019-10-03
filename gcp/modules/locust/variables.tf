@@ -10,6 +10,10 @@ variable "locust_target_host" {
   default = ""
 }
 
+variable "locust_secondary_host" {
+  default = ""
+}
+
 variable "locust_script" {
   default = ""
 }

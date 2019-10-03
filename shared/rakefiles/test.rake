@@ -29,6 +29,7 @@ end
 desc "[TEST] Run Locust swarm against Preferences service (WRITE) in current cluster"
 task :test_preferences_write => [:set_vars, :check_destroy_allowed] do
   ENV["TF_VAR_locust_target_host"] = "http://preferences.gpii.svc.cluster.local"
+  ENV["TF_VAR_locust_secondary_host"] = "https://flowmanager.#{ENV["TF_VAR_domain_name"]}"
   ENV["TF_VAR_locust_target_app"] = "preferences"
   ENV["TF_VAR_locust_stackdriver_label"] = "preferences_write"
   ENV["TF_VAR_locust_script"] = "preferences_write.py"

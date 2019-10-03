@@ -45,6 +45,8 @@ spec:
           value: "{{ .Values.service.internalPort }}"
         - name: TARGET_HOST
           value: {{ index .Values.master.config "target-host" | quote }}
+        - name: SECONDARY_HOST
+          value: {{ index .Values.master.config "secondary-host" | quote }}
         resources:
 {{ toYaml .Values.worker.resources | indent 10 }}
       restartPolicy: Always
